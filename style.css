@@ -88,6 +88,27 @@ body {
     padding: 0px 16px;
     
 }
+
+
+.team {
+    padding: 0px;
+}
+
+/* Three columns side by side */
+.column {
+    float: left;
+    width: 30%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    padding: 0 16px;
+}
+
 @media screen and (min-width: 700px) {
     /* rules for screen wider than 700 */
     .nav ul {
