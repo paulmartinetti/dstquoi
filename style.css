@@ -10,6 +10,8 @@ body {
     padding: 0px;
     margin: 0px;
 }
+
+/************************ HEAD *************************/
 .head-wrapper {
     display: flex;
     background: rgb(45,117,182);
@@ -18,7 +20,7 @@ body {
 .logo {
     padding-left: 5px;
     padding-top: 5px;
-    flex: 0 0 65%;
+    flex: 0 0 35%;
 }
 .nav {
     flex: 1;
@@ -52,6 +54,18 @@ body {
     color: white;
     cursor: pointer;
 }
+
+.totop a {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+.totop a:hover {
+    color: white;
+    cursor: pointer;
+}
+
+/************************ Top IMAGE *************************/
 .image-area {
     background-image:url('images/background.jpg');
     background-color:#002060;
@@ -72,13 +86,22 @@ body {
     font-size: 2rem;
     
 }
+
+/************************ INTRO *************************/
+.intro-space {
+    padding-top: 100px;
+}
 .intro-text {
     color: white;
     font-size: 1.5rem;
     text-align: center;
+    border-color: white;
+    border-style: inset;
     padding-top: 50px;
     padding-bottom: 50px;
 }
+
+/************************ SERVICES *************************/
 .single-service {
     text-align: center;
     margin-bottom: 32px;
@@ -88,6 +111,16 @@ body {
     padding: 0px 16px;
     
 }
+
+/************************ CONTACT *************************/
+.contact {
+    text-align: center;
+    background-color: #002060;
+    color: white;
+    font-size: 1rem;
+    
+}
+
 @media screen and (min-width: 700px) {
     /* rules for screen wider than 700 */
     .nav ul {
