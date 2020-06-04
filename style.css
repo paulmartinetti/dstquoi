@@ -1,6 +1,5 @@
 body {
     background-color: #002060;
-    color: white;
     /* #EE7D31 (orange) #002060 dark blue
      #2D75B6 light blue
     this is the root font size in 'rem' in nav ul li below */
@@ -90,6 +89,13 @@ body {
 /************************ INTRO *************************/
 .intro-space {
     padding-top: 100px;
+    display: flex;
+}
+.intro-line {
+    height: 2px;
+    width: 20%;
+    margin-top: 65px;
+    background-color: white;
 }
 .intro-text {
     color: white;
@@ -99,6 +105,7 @@ body {
     border-style: inset;
     padding-top: 50px;
     padding-bottom: 50px;
+    width: 60%;
 }
 
 /************************ SERVICES *************************/
