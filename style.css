@@ -14,12 +14,6 @@ body {
     margin: 0px;
 }
 
-.centered-container {
-    max-width: 1020px;
-    margin: 0px auto;
-    padding: 0px 16px;
-}
-
 /************************ HEAD *************************/
 .head-wrapper {
     display: inline-block;
@@ -28,7 +22,9 @@ body {
     background: linear-gradient(95deg, rgba(45,117,182,1) 0%, rgba(238,125,49,1) 100%, rgba(45,117,182,1) 100%);
 }
 .logo {
-    padding-top: 20px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid white;
 }
 .nav {
     color: white;
@@ -75,19 +71,22 @@ body {
 /************************ SERVICES *************************/
 /*https://css-tricks.com/negative-margins/*/
 .module-wrapper {
-    display: flex;
+    display: inline;
 }
 .module {
     padding: 1rem;
     margin: 1rem;
     background: white;
-    width: 25%;
+    width: 80%;
 }
 .module h2 {
     background: #2D75B6;
     color: white;
     margin: -1rem -1rem 1rem -1rem;
     padding: 0.5rem;
+    font-size: 0.8rem;
+}
+.module li {
     font-size: 0.8rem;
 }
 .module :last-child {
@@ -142,7 +141,8 @@ body {
     .logo {
         padding-left: 5px;
         padding-top: 5px;
-        flex: 0 0 35%;
+        padding-bottom: 0px;
+        border-bottom: 0px;
     }
     .nav {
         flex: 1;
@@ -154,8 +154,15 @@ body {
     .nav ul li {
         display: inline-block;
         border-bottom: 0px;
-        border-left: 1px solid white;
         text-align: left;
+    }
+
+    .module-wrapper {
+        display: flex;
+    }
+
+    .module {
+        width: 30%;
     }
 
 }
