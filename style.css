@@ -1,28 +1,36 @@
 body {
-    background-color: #002060;
+    background-image: url("images/bg.gif"); /* The image used */
+    background-color:  #002060;; /* Used if the image is unavailable */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
     /* #EE7D31 (orange) #002060 dark blue
      #2D75B6 light blue
     this is the root font size in 'rem' in nav ul li below */
-    font-size: 16px;
+    font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
     /* remove all padding, nav has own padding */
     padding: 0px;
     margin: 0px;
 }
 
+.centered-container {
+    max-width: 1020px;
+    margin: 0px auto;
+    padding: 0px 16px;
+}
+
 /************************ HEAD *************************/
 .head-wrapper {
-    display: flex;
+    display: inline-block;
+    padding: 20px;
     background: rgb(45,117,182);
     background: linear-gradient(95deg, rgba(45,117,182,1) 0%, rgba(238,125,49,1) 100%, rgba(45,117,182,1) 100%);
 }
 .logo {
-    padding-left: 5px;
-    padding-top: 5px;
-    flex: 0 0 35%;
+    padding-top: 20px;
 }
 .nav {
-    flex: 1;
     color: white;
 }
 .nav ul {
@@ -38,7 +46,7 @@ body {
     padding: 16px;
     text-align: center;
     /* size relative to font size set in body */
-    font-size: 1.2rem;
+    font-size: 1rem;
     border-bottom: 1px solid white;
     transition: background-color 0.5s;
 }
@@ -64,40 +72,44 @@ body {
     cursor: pointer;
 }
 
-/************************ Top IMAGE *************************/
-.image-area {
-    background-image:url('images/background.jpg');
-    background-color:#002060;
-    background-position: center center;
-    background-size: cover;
-    padding-top: 25px;
-    padding-bottom: 375px;
-}
-.centered-container {
-    max-width: 1020px;
-    margin: 0px auto;
-    padding: 0px 16px;
-}
-.image-text {
-    text-align: center;
-    background-color: #002060;
-    color: white;
-    font-size: 2rem;
-    
-}
-
-/************************ INTRO *************************/
-.intro-space {
-    padding-top: 100px;
+/************************ SERVICES *************************/
+/*https://css-tricks.com/negative-margins/*/
+.module-wrapper {
     display: flex;
 }
-.intro-line {
+.module {
+    padding: 1rem;
+    margin: 1rem;
+    background: white;
+    width: 25%;
+}
+.module h2 {
+    background: #2D75B6;
+    color: white;
+    margin: -1rem -1rem 1rem -1rem;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+}
+.module :last-child {
+    margin-bottom: 0;
+}
+
+/************************ VERTICAL SPACE *************************/
+.vertical-space {
+    height: 50px;
+}
+
+/************************ SLOGAN *************************/
+.slogan-space {
+    display: flex;
+}
+.slogan-line {
     height: 2px;
     width: 20%;
     margin-top: 65px;
     background-color: white;
 }
-.intro-text {
+.slogan-text {
     color: white;
     font-size: 1.5rem;
     text-align: center;
@@ -109,15 +121,6 @@ body {
 }
 
 /************************ SERVICES *************************/
-.single-service {
-    text-align: center;
-    margin-bottom: 32px;
-
-}
-.single-service p {
-    padding: 0px 16px;
-    
-}
 
 /************************ CONTACT *************************/
 .contact {
@@ -125,11 +128,26 @@ body {
     background-color: #002060;
     color: white;
     font-size: 1rem;
-    
 }
 
 @media screen and (min-width: 700px) {
     /* rules for screen wider than 700 */
+    .head-wrapper {
+        display: flex;
+        padding: 0px;
+        padding-right: 5px;
+        background: rgb(45,117,182);
+        background: linear-gradient(95deg, rgba(45,117,182,1) 0%, rgba(238,125,49,1) 100%, rgba(45,117,182,1) 100%);
+    }
+    .logo {
+        padding-left: 5px;
+        padding-top: 5px;
+        flex: 0 0 35%;
+    }
+    .nav {
+        flex: 1;
+        color: white;
+    }
     .nav ul {
         text-align: right;
     }
@@ -139,8 +157,5 @@ body {
         border-left: 1px solid white;
         text-align: left;
     }
-    .single-service {
-        width: 50%;
-        float: left;
-    }
+
 }
